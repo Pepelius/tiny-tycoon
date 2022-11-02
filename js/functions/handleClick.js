@@ -1,0 +1,1 @@
+// Handler for when the player clicks a button to collect income from a building manually
