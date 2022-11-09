@@ -1,6 +1,4 @@
 // Building component
-import handlePurchase from "../functions/handlePurchase.js";
-
 const buildings = [];
 
 export default class Building {
