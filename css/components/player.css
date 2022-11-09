@@ -1,0 +1,24 @@
+/* Player profile styling */
+#player #top-info {
+    background-color: var(--color-black);
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+#player #top-info .current-balance {
+    padding: 2em 1.5em;
+    text-align: right;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+#player #top-info .current-balance .label {
+    display: block;
+    color: var(--color-lightgreen);
+    font-size: 1rem;
+    font-weight: 200;
+    margin: .2em 0;
+}

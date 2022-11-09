@@ -3,6 +3,7 @@
 
 /* Component imports */
 @import "../components/building.css";
+@import "../components/player.css";
 
 /* Variables */
 :root {
@@ -40,9 +41,16 @@ main#game {
 /* Top Banner with Logo */
 #top-banner {
     background-color: var(--color-black);
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
     color: #fff;
 }
 #logo {
+    padding: 2em 1.5em;
     font-family: 'Lobster', cursive;
     font-weight: 400;
     color: var(--color-lavender);
@@ -60,8 +68,7 @@ aside#player {
     display: flex;
     flex-direction: column;
     width: 25%;
-    background-color: #999;
-    padding: 25px;
+    background-color: var(--color-shadows);
     border-left: 2px solid #666;
 }
 
@@ -71,10 +78,23 @@ button {
     padding: .5em 1.25em;
     color: #fff;
     border: 0;
+    cursor: pointer;
+    transition: all .15s ease-out;
+}
+button:hover {
+    background-color: var(--color-black);
 }
 button.purchase {
-    background-color: darkcyan;
+    background-color: var(--color-lightgreen);
+    color: var(--color-black);
+}
+button.purchase:hover {
+    background-color: var(--color-black);
+    color: #fff;
 }
 button.upgrade {
-    background-color: darkseagreen;
+    background-color: var(--color-shamrock);
+}
+button.upgrade:hover {
+    background-color: var(--color-black);
 }

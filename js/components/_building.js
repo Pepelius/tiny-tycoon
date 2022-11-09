@@ -73,7 +73,7 @@ export default class Building {
             const newOutput = `
                 <header>
                     <h3>${object.name}</h3>
-                    <aside>${!object.level ? "You don't own this building yet" : "Level: " + object.level}</aside>
+                    <aside>${!object.level ? "<em>You don't own this building yet</em>" : "Level: " + object.level}</aside>
                 </header>
                 <button id="purchase-${object.id}" class="${!object.level ? 'purchase' : 'upgrade'}">
                     ${!object.level ? 'Purchase (' + object.cost + ' €)' : 'Upgrade (' + object.cost + ' €)'}

@@ -34,7 +34,7 @@ export default function Game() {
             <article id="building-${building.id}">
                 <header>
                     <h3>${building.name}</h3>
-                    <aside>${!building.level ? "You don't own this building yet" : "Level: " + building.level}</aside>
+                    <aside>${!building.level ? "<em>You don't own this building yet</em>" : "Level: " + building.level}</aside>
                 </header>
                 <button id="purchase-${building.id}" class="${!building.level ? 'purchase' : 'upgrade'}">
                     ${!building.level ? 'Purchase (' + building.cost + ' €)' : 'Upgrade (' + building.cost + ' €)'}
@@ -60,6 +60,6 @@ export default function Game() {
     // Runtime, updating the view once per second
     window.setInterval(function(){
         // Do stuff here
-        wallet.update();
+        //wallet.update();
     }, 1000);
 }
