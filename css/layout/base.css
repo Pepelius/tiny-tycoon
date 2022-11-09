@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;400;600&family=Lobster&display=swap');
 
 /* Component imports */
-@import "css/components/building.css";
+@import "../components/building.css";
 
 /* Variables */
 :root {
