@@ -1,1 +1,42 @@
 /* Base CSS styling */
+html {
+    height: 100vh;
+}
+body {
+    height: 100%;
+    margin: 0;
+}
+main#game {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+}
+
+/* List of buildings */
+section#buildings {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 25px;
+}
+section#buildings > article {
+    background-color: #f2f2f2;
+    padding: 15px 25px;
+    border: 5px solid #666;
+}
+section#buildings > article+article {
+    margin-top: 25px;
+}
+section#buildings > article h3 {
+    margin-top: 0;
+}
+
+/* Sidebar with player profile information and settings */
+aside#player {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: #999;
+    padding: 25px;
+    border-left: 2px solid #666;
+}
