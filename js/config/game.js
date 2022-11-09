@@ -1,12 +1,12 @@
 // Game configuration
 
 // Component imports
-import Wallet from "/js/components/_wallet.js";
-import Building from "/js/components/_building.js";
-import { buildings } from "/js/components/_building.js";
+import Wallet from "js/components/_wallet.js";
+import Building from "js/components/_building.js";
+import { buildings } from "js/components/_building.js";
 
 // Function imports
-import handlePurchase from "/js/functions/handlePurchase.js";
+import handlePurchase from "js/functions/handlePurchase.js";
 
 export default function Game() {
     // Initializing player's wallet
