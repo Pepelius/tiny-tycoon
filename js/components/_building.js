@@ -63,15 +63,34 @@ export default class Building {
     }
 
     // Render methods
-    render(output) {
+    render(output, object) {
         const listOfBuildings = document.getElementById('buildings');
-        listOfBuildings.innerHTML += output;
 
-        //document.getElementById('buildings').innerHTML = `<span class="current">${this._balance} €</span>`;
+        if (output !== undefined) {
+            // Initial render
+            listOfBuildings.innerHTML += output;
+        } else {
+            // Updating the existing building element
+            const target = document.getElementById(`building-${object.id}`);
+            const newOutput = `
+                <header>
+                    <h3>${object.name}</h3>
+                    <aside>${!object.level ? "You don't own this building yet" : "Level: " + object.level}</aside>
+                </header>
+                <button id="purchase-${object.id}" class="${!object.level ? 'purchase' : 'upgrade'}">
+                    ${!object.level ? 'Purchase (' + object.cost + ' €)' : 'Upgrade (' + object.cost + ' €)'}
+                </button>
+            `;
+
+            if (target) {
+                target.innerHTML = newOutput;
+            } else {
+                console.error('No target found, calling render() through update() on _building.js');
+            }
+        }
     }
-    update(element) {
-        //console.log('View should get updated by now...');
-        this.render(element);
+    update(object) {
+        this.render(undefined, object);
     }
 }
 

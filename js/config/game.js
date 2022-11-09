@@ -31,18 +31,17 @@ export default function Game() {
     let buildingsInView = [];
     buildings.forEach((building) => {
         const output = `
-            <article>
+            <article id="building-${building.id}">
                 <header>
                     <h3>${building.name}</h3>
-                    <aside>${building.level}</aside>
+                    <aside>${!building.level ? "You don't own this building yet" : "Level: " + building.level}</aside>
                 </header>
-                <span class="cost">Cost: ${building.cost}</span>
                 <button id="purchase-${building.id}" class="${!building.level ? 'purchase' : 'upgrade'}">
-                    ${!building.level ? 'Purchase' : 'Upgrade'}
+                    ${!building.level ? 'Purchase (' + building.cost + ' €)' : 'Upgrade (' + building.cost + ' €)'}
                 </button>
             </article>
         `;
-        building.render(output); // Send each building to be rendered
+        building.render(output, building); // Send each building to be rendered
         buildingsInView.push(building); // Not sure if necessary, but there it is - an array of rendered buildings
 
         // Adding event listeners
@@ -50,7 +49,7 @@ export default function Game() {
             const purchaseOne = document.getElementById('purchase-' + building.id);
             purchaseOne.addEventListener('click', (event) => {
                 handlePurchase({building}, {wallet}, 1);
-                building.update(output);
+                building.update(building);
             });
         }, 200);
     });

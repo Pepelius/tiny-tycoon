@@ -1,3 +1,6 @@
+/* Component imports */
+@import "../components/building.css";
+
 /* Base CSS styling */
 html {
     height: 100vh;
@@ -13,22 +16,11 @@ main#game {
 }
 
 /* List of buildings */
-section#buildings {
+#buildings {
     display: flex;
     flex-direction: column;
     width: 80%;
     padding: 25px;
-}
-section#buildings > article {
-    background-color: #f2f2f2;
-    padding: 15px 25px;
-    border: 5px solid #666;
-}
-section#buildings > article+article {
-    margin-top: 25px;
-}
-section#buildings > article h3 {
-    margin-top: 0;
 }
 
 /* Sidebar with player profile information and settings */

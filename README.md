@@ -16,4 +16,4 @@ Initializing and running the game can be accomplished by opening the `index.html
   - `templates` - Mustache templates for rendering components
 
 ### Additional libraries
-- [Mustache.js](https://github.com/janl/mustache.js)
+- None at the moment

@@ -1,1 +1,20 @@
 /* Building CSS */
+#buildings > article {
+    background-color: #f2f2f2;
+    padding: 15px 25px;
+    border: 5px solid #666;
+}
+#buildings > article+article {
+    margin-top: 25px;
+}
+#buildings > article > header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#buildings > article > header h3 {
+    margin-top: 0;
+}
+#buildings > article > header > aside {
+
+}
